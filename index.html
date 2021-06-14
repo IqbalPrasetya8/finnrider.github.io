@@ -1,20 +1,63 @@
-
+<!DOCTYPE html>
 <html>
+
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <body>
+    <title></title>
+</head>
+
+<body>
+    
         <h1>Hai cantikkkk</h1>
         <img src="https://raw.githubusercontent.com/odoyaja/image-5453/main/IMG_6715-picsay.jpg">
-        <h1>mau ga jadi pacar jorji?</h1>
+        <h1>mau ga jadi pacar aku?</h1>
         <button id='btn_mau' onclick='alert("I <3 U")'>Mau</button>&nbsp;
-        <button id='btn_gamau' onclick='gamau(this)' style='position:absolute'>Gamau</button>
-    </body>
-    <script>
-        function gamau(id){
-            var mau = document.getElementById('btn_mau');
-            var i = Math.floor(Math.random()*300)+1;
-            var j = Math.floor(Math.random()*100)+mau.offsetTop;
-            id.style.left = i+'px';
-            id.style.top = j+'px';
-        }
-    </script>
+        <button id='btn_gamau' onclick='myFunction(this)' style='position:absolute'>Gak Mau</button>
+    
+
+<div id="myDIV">
+  <p>Play dongg sayang...</p>
+   <audio controls id="musik">
+     <source src="Prank.mp3" type="audio/mpeg">
+        </audio>
+</div>
+<style>
+
+#myDIV {
+  font-weight: bold;
+  width: 100%;
+  padding: 0;
+  text-align: center;
+  background-color: ;
+  margin-top: ;
+  display: none;
+  
+  
+  
+}
+#btn_mau  {
+  padding: 10px;
+  font-weight: bold;
+  color: #00A521;
+}
+#btn_gamau {
+padding: 10px;
+font-weight: bold;
+color: #B90000;
+
+}
+</style>
+<script>
+  function myFunction() {
+  var x = document.getElementById("myDIV");
+  if (x.style.display === "none") {
+  x.style.display = "block";
+  } else {
+  x.style.display = "block";
+  }
+  }
+</script>
+</body>
+
 </html>
