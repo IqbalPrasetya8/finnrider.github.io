@@ -2,62 +2,208 @@
 <html>
 
 <head>
-        <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Web Iseng</title>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
 </head>
 
 <body>
-    
-        <h1>Hai cantikkkk</h1>
+ <div class="login-box">
+   
+        <h1>Hai Cantikkkk</h1>
         <img src="giphy.webp" height="120" width="220">
-        <h1>mau ga jadi pacar aku?</h1>
-        <button id='btn_mau' onclick='alert("I LOVE YOU!")'>Mau</button>&nbsp;
-        <button id='btn_gamau' onclick='myFunction(this)' style='position:absolute'>Gak Mau</button>
+        <h1>Mau Gak Jadi Pacar Aku?</h1>
+        <button id='btn_mau' onclick='onclickmau()'>Mau
+        </button>&nbsp;
+        <button id='btn_gamau' onclick='myFunction(this)' style='position:absolute'>Gak Mau
+        </button>
     
-
-<div id="myDIV">
-  <p>Play dongg sayang...</p>
-   <audio controls id="musik">
-     <source src="Prank.mp3" type="audio/mpeg">
-        </audio>
-</div>
-<style>
-
-#myDIV {
+   <form>
+     <div class="user-box">
+  
+     </div>
+ 
+   </form>
+    <div id="sound">
+      <p>Play dongg!...</p>
+      <audio controls id="musik">
+        <source src="Prank.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+    <div id="ClickMau">
+      <p>Iyaa Aku Juga Sayang  Kok!</p>
+    </div>
+ </div>
+ 
+ <style>
+   html {
+  height: 100%;
+}
+body {
+  margin:0;
+  padding:0;
+  font-family: sans-serif;
+  background: linear-gradient(#141e30, #243b55);
+}
+.login-box #sound{
   font-weight: bold;
   width: 100%;
   padding: 0;
   text-align: center;
-  background-color: ;
+  background-color:  ;
   margin-top: ;
   display: none;
   
   
   
+  
 }
-#btn_mau  {
+.login-box #ClickMau{
+  display: none;
+}
+.login-box h1 {
+  color: white;
+  
+}
+.login-box #sound #musik{
+  width: 200px;
+  background-color: #141e30;
+  color: #141e30;
+}
+
+.login-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 310px;
+  padding: 40px;
+  
+  transform: translate(-50%, -50%);
+  background: rgba(0,0,0,.5);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(u,0,0,.6);
+  border-radius: 10px;
+}
+.login-box #sound p{
+  color: white;
+}
+.login-box #ClickMau p{
+  color: white;
+  font-weight: bold
+  
+}
+.login-box #btn_mau{
+  background-color: #1B831C;
+  border: none;
+  width: 100px;
   padding: 10px;
-  font-weight: bold;
-  color: #00A521;
+  border-radius: 7px;
+  box-shadow: 2px 2px 2px #000000; 
 }
-#btn_gamau {
+
+.login-box #btn_gamau{
+background-color: #831B1B;
+border: none;
+width: 100px;
 padding: 10px;
-font-weight: bold;
-color: #B90000;
+border-radius: 7px;
+margin-right: 8px;
+box-shadow: 2px 2px 2px #000000; 
 
 }
-</style>
-<script>
-  function myFunction() {
-  var x = document.getElementById("myDIV");
-  if (x.style.display === "none") {
-  x.style.display = "block";
-  } else {
-  x.style.display = "block";
-  }
-  }
-</script>
+.login-box #btn_gamau:hover{
+  outline: none ;
+  
+}
+.login-box #btn_mau:hover{
+  outline: none;
+  
+}
+.login-box #btn_mau:active{
+  transform: translateY(2px);
+  background-color: #18561E;
+}
+.login-box #btn_gamau:active{
+  background-color: #561818;
+  transform: translateY(2px);
+  
+}
+.login-box h2 {
+  margin: 0 0 30px;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+}
+
+.login-box .user-box {
+  position: relative;
+}
+
+.login-box .user-box input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
+.login-box .user-box label {
+  position: absolute;
+  top:0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  pointer-events: none;
+  transition: .5s;
+}
+
+.login-box .user-box input:focus ~ label,
+.login-box .user-bo
+
+
+ </style>
+ <script>
+   function myFunction() {
+     var x = document.getElementById("sound");
+     if (x.style.display === "none") {
+       x.style.display = "block";
+     } else {
+       x.style.display = "block";
+       
+     }
+     var z = document.getElementById("ClickMau");
+     if (z.style.display === "none"
+     ) {
+     z.style.display = "none";
+     } else {
+     z.style.display = "none";
+     }
+     
+   }
+   function onclickmau() {
+     var x = document.getElementById("ClickMau");
+     if (x.style.display === "none"
+     ) {
+       x.style.display = "block";
+     } else {
+       x.style.display = "block";
+     }
+     var y = document.getElementById("sound");
+     if (y.style.display === "none"
+     ) {
+     y.style.display = "none";
+     } else {
+     y.style.display = "none";
+     }
+   }
+   
+  
+   
+   
+ </script>
 </body>
 
 </html>
